@@ -1,0 +1,1 @@
+import { Inbox } from 'lucide-react'; export default function EmptyState({title,text,action,label}:{title:string;text:string;action?:()=>void;label?:string}){return <div className="empty"><Inbox size={32}/><h3>{title}</h3><p>{text}</p>{action&&label&&<button className="primary" onClick={action}>{label}</button>}</div>}

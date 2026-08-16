@@ -1,0 +1,3 @@
+import { Shuffle } from 'lucide-react'; import type { View } from '../types';
+const titles:Record<View,string>={dashboard:'Weekly Chores',residents:'Residents',chores:'Chores',history:'Assignment History',settings:'Settings'};
+export default function Header({view,week,house,onGenerate}:{view:View;week:string;house:string;onGenerate:()=>void}){return <header className="topbar"><div><span className="eyebrow">{house}</span><h1>{titles[view]}</h1>{view==='dashboard'&&<p>{week}</p>}</div>{view==='dashboard'&&<button className="primary" onClick={onGenerate}><Shuffle size={17}/>Generate Chores</button>}</header>}
